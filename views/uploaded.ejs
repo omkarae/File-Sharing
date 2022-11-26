@@ -11,8 +11,14 @@
     <% if (locals.fileLink != null) { %>
         <div style="margin-bottom: 1rem;">
             Your file is upload.
-            <a href="<%= locals.fileLink %>">Download</a>
+            <a id="link" href="<%= locals.fileLink %>">Download</a>
         </div>   
+        <div>
+            Want to share this file?
+            Please copy this link 
+            <br>
+            <h3> <%= locals.fileLink %> </h3>
+        </div>
     <% } %>
     <a href="/">
         <button>
