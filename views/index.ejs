@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>File System</title>
+</head>
+<body>
+    <% if (locals.fileLink != null) { %>
+        <div style="margin-bottom: 1rem;">
+            Your file is upload.
+            <a href="<%= locals.fileLink %>">Download</a>
+        </div>   
+    <% } %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   <form action="/upload" method="post" style="display: grid; gap: .5rem; grid-template-columns:auto 1fr; max-width: 500px; margin: 0 auto;" enctype="multipart/form-data">
+        <label for="file">File:</label>
+        <input type="file" id="file" name="file" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"  />
+        <button style="grid-column:span 2;" type="submit">
+            Share
+        </button>
+    </form>
+
+<!-- 
+   <br>
+   <br>
+   <br>
+   <br>
+   <center>
+        Already uploaded files:
+        Check here
+        <form action="/find" method="post" style="display: grid; gap: .5rem; grid-template-columns:auto 1fr; max-width: 500px; margin: 0 auto;" enctype="multipart/form-data">
+            <label for="fileName">File:</label>
+            <input type="text" id="fileName" name="fileName" required />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"  />
+            <button style="grid-column:span 2;" type="submit">
+                Check
+            </button>
+        </form>
+    </center> -->
+</body>
+</html>
